@@ -1,0 +1,38 @@
+{
+    "name": "wernerdweight/token-generator",
+    "type": "library",
+    "description": "Simple PHP random token generator",
+    "keywords": [
+        "random",
+        "token",
+        "generator"
+    ],
+    "homepage": "https://github.com/wernerdweight/TokenGenerator",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Werner Dweight Solutions",
+            "email": "info@wds.blue"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "require-dev": {
+        "wernerdweight/cs": "~0"
+    },
+    "suggest": {},
+    "autoload": {
+        "psr-0": {
+            "WernerDweight\\TokenGenerator\\": ""
+        }
+    },
+    "target-dir": "WernerDweight/TokenGenerator",
+    "scripts": {
+        "fix": "phpcbf --standard=vendor/wernerdweight/cs/WernerDweight/CS/src/ruleset.xml --extensions=php --encoding=utf-8 --tab-width=4 -sp ./TokenGenerator.php && php-cs-fixer fix --config=vendor/wernerdweight/cs/WernerDweight/CS/.php_cs.dist --verbose --diff ./TokenGenerator.php",
+        "phpstan": "phpstan analyse ./TokenGenerator.php --level max",
+        "phpcs": "phpcs --standard=vendor/wernerdweight/cs/WernerDweight/CS/src/ruleset.xml --extensions=php --encoding=utf-8 --tab-width=4 -sp ./TokenGenerator.php",
+        "phpcs-fix": "php-cs-fixer fix --config=vendor/wernerdweight/cs/WernerDweight/CS/.php_cs.dist --dry-run --verbose --diff ./TokenGenerator.php",
+        "phpunit": "phpunit"
+    }
+}
