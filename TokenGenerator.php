@@ -18,6 +18,7 @@ class TokenGenerator
 
     /**
      * TokenGenerator constructor.
+     *
      * @param string $alphabet
      */
     public function __construct(string $alphabet = self::ALPHABET)

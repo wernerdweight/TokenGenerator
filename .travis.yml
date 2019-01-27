@@ -8,5 +8,7 @@ php:
 script:
   - composer install
   - composer phpstan
-  - composer phpcs
+  - composer ecs
+  - composer phpmd
   - composer phpunit
+  - composer victor show
