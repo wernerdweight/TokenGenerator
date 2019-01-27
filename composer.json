@@ -29,11 +29,11 @@
     },
     "target-dir": "WernerDweight/TokenGenerator",
     "scripts": {
-        "fix": "ecs check ./TokenGenerator.php ./tests/ --config vendor/wernerdweight/cs/WernerDweight/CS/src/ecs.yaml --fix",
-        "phpstan": "phpstan analyse ./TokenGenerator.php ./tests/ --level max",
+        "fix": "ecs check ./TokenGenerator.php ./Tests/ --config vendor/wernerdweight/cs/WernerDweight/CS/src/ecs.yaml --fix",
+        "phpstan": "phpstan analyse ./TokenGenerator.php ./Tests/ --level max",
         "phpmd": "phpmd ./TokenGenerator.php text vendor/wernerdweight/cs/WernerDweight/CS/phpmd.xml",
-        "ecs": "ecs check ./TokenGenerator.php ./tests/ --config vendor/wernerdweight/cs/WernerDweight/CS/src/ecs.yaml",
-        "ecs-fix": "ecs check ./TokenGenerator.php ./tests/ --config vendor/wernerdweight/cs/WernerDweight/CS/src/ecs.yaml --fix",
+        "ecs": "ecs check ./TokenGenerator.php ./Tests/ --config vendor/wernerdweight/cs/WernerDweight/CS/src/ecs.yaml",
+        "ecs-fix": "ecs check ./TokenGenerator.php ./Tests/ --config vendor/wernerdweight/cs/WernerDweight/CS/src/ecs.yaml --fix",
         "phpunit": "phpunit",
         "victor": "victor"
     }
