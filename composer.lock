@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c1994fb04f06ea6b812e1b49207ec640",
+    "content-hash": "0588ad1bd68b4e5d97e6f38a6a465dee",
     "packages": [],
     "packages-dev": [
         {
@@ -5234,17 +5234,17 @@
         },
         {
             "name": "wernerdweight/cs",
-            "version": "v1.3.2",
+            "version": "1.3.3",
             "target-dir": "WernerDweight/CS",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wernerdweight/CS.git",
-                "reference": "5d5b16af1610d8b1238e25a79dd8d2a0f8453175"
+                "reference": "301cf75c067b9005da5d33cea639d310d3afc0bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wernerdweight/CS/zipball/5d5b16af1610d8b1238e25a79dd8d2a0f8453175",
-                "reference": "5d5b16af1610d8b1238e25a79dd8d2a0f8453175",
+                "url": "https://api.github.com/repos/wernerdweight/CS/zipball/301cf75c067b9005da5d33cea639d310d3afc0bb",
+                "reference": "301cf75c067b9005da5d33cea639d310d3afc0bb",
                 "shasum": ""
             },
             "require": {
@@ -5279,7 +5279,7 @@
                 "cs",
                 "standards"
             ],
-            "time": "2019-07-16T13:07:52+00:00"
+            "time": "2019-11-19T07:29:04+00:00"
         },
         {
             "name": "wernerdweight/victor",
@@ -5348,7 +5348,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.1.0"
+        "php": ">=7.2.0"
     },
     "platform-dev": []
 }
