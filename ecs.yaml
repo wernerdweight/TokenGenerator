@@ -1,0 +1,8 @@
+imports:
+    - { resource: 'vendor/wernerdweight/cs/WernerDweight/CS/src/ecs.yaml' }
+
+parameters:
+    skip:
+        # this is a bug in Symplify (a bitwise operation is causing this)
+        Symplify\CodingStandard\Sniffs\CleanCode\ForbiddenReferenceSniff:
+            - 'TokenGenerator.php'
