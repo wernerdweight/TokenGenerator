@@ -1,5 +1,5 @@
 imports:
-    - { resource: 'vendor/wernerdweight/cs/WernerDweight/CS/src/ecs.yaml' }
+    - { resource: 'vendor/wernerdweight/cs/src/ecs.yaml' }
 
 parameters:
     skip:

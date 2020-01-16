@@ -32,7 +32,7 @@ class TokenGeneratorTest extends TestCase
      */
     public function testReturnType(): void
     {
-        $this->assertInternalType('string', $this->getTokenGenerator()->generate());
+        $this->assertIsString($this->getTokenGenerator()->generate());
     }
 
     /**
