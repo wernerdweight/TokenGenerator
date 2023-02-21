@@ -8,30 +8,38 @@ namespace WernerDweight\TokenGenerator;
  */
 class TokenGenerator
 {
-    /** @var string */
+    /**
+     * @var string
+     */
     private const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-';
-    /** @var int */
-    private const DEFAULT_TOKEN_LENGTH = 32;
-
-    /** @var string */
-    private $alphabet;
 
     /**
-     * TokenGenerator constructor.
-     *
-     * @param string $alphabet
+     * @var int
      */
+    private const DEFAULT_TOKEN_LENGTH = 32;
+
+    /**
+     * @var string
+     */
+    private $alphabet;
+
     public function __construct(string $alphabet = self::ALPHABET)
     {
         $this->alphabet = $alphabet;
     }
 
-    /**
-     * @param int $min
-     * @param int $max
-     *
-     * @return int
-     */
+    public function generate(int $length = self::DEFAULT_TOKEN_LENGTH): string
+    {
+        $token = '';
+
+        $alphabetLength = strlen($this->alphabet);
+        for ($index = 0; $index < $length; $index++) {
+            $token .= $this->alphabet[$this->getRandomNumberFromRange(0, $alphabetLength)];
+        }
+
+        return $token;
+    }
+
     private function getRandomNumberFromRange(int $min, int $max): int
     {
         $range = $max - $min;
@@ -51,27 +59,12 @@ class TokenGenerator
 
         do {
             $randomBytes = (string)openssl_random_pseudo_bytes($bytes);
-            $rnd = hexdec(bin2hex($randomBytes));
+            $randomHexBytes = bin2hex($randomBytes);
+            $rnd = hexdec($randomHexBytes);
             // discard irrelevant bits
             $rnd = $rnd & $filter;
         } while ($rnd >= $range);
 
         return $min + $rnd;
-    }
-
-    /**
-     * @param int $length
-     *
-     * @return string
-     */
-    public function generate(int $length = self::DEFAULT_TOKEN_LENGTH): string
-    {
-        $token = '';
-
-        for ($i = 0; $i < $length; $i++) {
-            $token .= $this->alphabet[$this->getRandomNumberFromRange(0, strlen($this->alphabet))];
-        }
-
-        return $token;
     }
 }

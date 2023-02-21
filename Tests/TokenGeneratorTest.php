@@ -17,17 +17,6 @@ class TokenGeneratorTest extends TestCase
     protected $tokenGenerator;
 
     /**
-     * @return TokenGenerator
-     */
-    protected function getTokenGenerator(): TokenGenerator
-    {
-        if (null === $this->tokenGenerator) {
-            $this->tokenGenerator = new TokenGenerator();
-        }
-        return $this->tokenGenerator;
-    }
-
-    /**
      * Test return type.
      */
     public function testReturnType(): void
@@ -45,5 +34,13 @@ class TokenGeneratorTest extends TestCase
         $this->assertTrue(1 === strlen($this->getTokenGenerator()->generate(1)));
         $this->assertTrue(256 === strlen($this->getTokenGenerator()->generate(256)));
         $this->assertTrue(0 === strlen($this->getTokenGenerator()->generate(0)));
+    }
+
+    protected function getTokenGenerator(): TokenGenerator
+    {
+        if (null === $this->tokenGenerator) {
+            $this->tokenGenerator = new TokenGenerator();
+        }
+        return $this->tokenGenerator;
     }
 }

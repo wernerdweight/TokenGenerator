@@ -3,7 +3,7 @@ Token Generator
 
 Simple PHP random token generator
 
-[![Build Status](https://travis-ci.org/wernerdweight/TokenGenerator.svg?branch=master)](https://travis-ci.org/wernerdweight/TokenGenerator)
+[![Build Status](https://app.travis-ci.com/wernerdweight/TokenGenerator.svg?branch=master)](https://app.travis-ci.com/wernerdweight/TokenGenerator)
 
 Instalation
 --
